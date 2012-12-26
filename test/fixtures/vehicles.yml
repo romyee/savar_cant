@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  vehicle_id: MyString
+  vehicle_type: 
+  unit_id: MyString
+  vin_id: MyString
+  description: MyText
+
+two:
+  vehicle_id: MyString
+  vehicle_type: 
+  unit_id: MyString
+  vin_id: MyString
+  description: MyText
