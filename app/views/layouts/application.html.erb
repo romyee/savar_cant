@@ -18,7 +18,13 @@
         <a class="brand" href="#">SavarCantt</a>
         <div class="nav-collapse">
           <ul class="nav">
-			<li><a href="#">Home</a></li>
+			<li><%= link_to "DashBoard", "#" %></li>
+			<li><%= link_to "Users", users_path %></li>
+			<li><%= link_to "VehicleTypes", vehicle_types_path %></li>
+			<li><%= link_to "Vehicle", vehicles_path %></li>
+			<li><%= link_to "Applications", application_forms_path %></li>
+			<li><%= link_to "Forms", forms_path %></li>
+			<li><%= link_to "LogOut", "#" %></li>
           </ul>
         </div>
       </div>

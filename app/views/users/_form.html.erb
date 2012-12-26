@@ -1,16 +1,13 @@
 <%= simple_form_for @user, :html => { :class => 'form-horizontal' } do |f| %>
-  <%= f.input :employee_id %>
+  <%= f.input :employee_id, :label => "Employee ID" %>
   <%= f.input :first_name %>
   <%= f.input :last_name %>
   <%= f.input :email %>
-  <%= f.input :address %>
+  <%= f.input :address, :input_html => { :size => "60x7"} %>
   <%= f.input :phone %>
   <%= f.input :designation %>
   <%= f.input :role %>
   <%= f.input :username %>
-  <%= f.input :salt_key %>
-  <%= f.input :salted_password %>
-  <%= f.input :reset_hash %>
   <div class="form-actions">
     <%= f.button :submit, :class => 'btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),

@@ -3,8 +3,8 @@
   <%= f.input :form_id %>
   <%= f.input :request_date %>
   <%= f.input :type_of_move %>
-  <%= f.input :purpose %>
-  <%= f.input :duration %>
+  <%= f.input :purpose, :input_html => { :size => "60x7"} %>
+  <%= f.input :duration, :input_html => { :size => "60x1"} %>
   <%= f.input :tracking_id %>
   <%= f.input :status %>
   <div class="form-actions">

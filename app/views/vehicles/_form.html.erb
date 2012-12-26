@@ -3,7 +3,7 @@
   <%= f.input :vehicle_type_id %>
   <%= f.input :unit_id %>
   <%= f.input :vin_id %>
-  <%= f.input :description %>
+  <%= f.input :description, :input_html => { :size => "60x7"}  %>
   <div class="form-actions">
     <%= f.button :submit, :class => 'btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
