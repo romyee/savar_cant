@@ -1,4 +1,6 @@
 SavarCantt::Application.routes.draw do
+  resources :users
+
   resources :vehicles
 
   resources :vehicle_types
