@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  application_form: 
+  vehicle_type: 
+  quantity: 1
+  user: 
+
+two:
+  application_form: 
+  vehicle_type: 
+  quantity: 1
+  user: 

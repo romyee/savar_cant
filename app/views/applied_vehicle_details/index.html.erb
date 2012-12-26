@@ -1,0 +1,42 @@
+<%- model_class = AppliedVehicleDetail -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:application_form_id) %></th>
+      <th><%= model_class.human_attribute_name(:vehicle_type_id) %></th>
+      <th><%= model_class.human_attribute_name(:quantity) %></th>
+      <th><%= model_class.human_attribute_name(:user_id) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @applied_vehicle_details.each do |applied_vehicle_detail| %>
+      <tr>
+        <td><%= link_to applied_vehicle_detail.id, applied_vehicle_detail_path(applied_vehicle_detail) %></td>
+        <td><%= applied_vehicle_detail.application_form_id %></td>
+        <td><%= applied_vehicle_detail.vehicle_type_id %></td>
+        <td><%= applied_vehicle_detail.quantity %></td>
+        <td><%= applied_vehicle_detail.user_id %></td>
+        <td><%=l applied_vehicle_detail.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_applied_vehicle_detail_path(applied_vehicle_detail), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      applied_vehicle_detail_path(applied_vehicle_detail),
+                      :method => :delete,
+                      :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_applied_vehicle_detail_path,
+            :class => 'btn btn-primary' %>

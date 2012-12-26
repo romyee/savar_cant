@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121226081058) do
+ActiveRecord::Schema.define(:version => 20121226082324) do
 
   create_table "application_forms", :force => true do |t|
     t.integer  "user_id"
@@ -28,6 +28,19 @@ ActiveRecord::Schema.define(:version => 20121226081058) do
 
   add_index "application_forms", ["form_id"], :name => "index_application_forms_on_form_id"
   add_index "application_forms", ["user_id"], :name => "index_application_forms_on_user_id"
+
+  create_table "applied_vehicle_details", :force => true do |t|
+    t.integer  "application_form_id"
+    t.integer  "vehicle_type_id"
+    t.integer  "quantity"
+    t.integer  "user_id"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+  end
+
+  add_index "applied_vehicle_details", ["application_form_id"], :name => "index_applied_vehicle_details_on_application_form_id"
+  add_index "applied_vehicle_details", ["user_id"], :name => "index_applied_vehicle_details_on_user_id"
+  add_index "applied_vehicle_details", ["vehicle_type_id"], :name => "index_applied_vehicle_details_on_vehicle_type_id"
 
   create_table "form_fields", :force => true do |t|
     t.string   "label"

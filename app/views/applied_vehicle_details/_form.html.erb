@@ -1,0 +1,11 @@
+<%= simple_form_for @applied_vehicle_detail, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :application_form_id %>
+  <%= f.input :vehicle_type_id %>
+  <%= f.input :quantity %>
+  <%= f.input :user_id %>
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                applied_vehicle_details_path, :class => 'btn' %>
+  </div>
+<% end %>

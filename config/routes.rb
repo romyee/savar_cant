@@ -1,4 +1,6 @@
 SavarCantt::Application.routes.draw do
+  resources :applied_vehicle_details
+
   resources :application_forms
 
   resources :form_fields
