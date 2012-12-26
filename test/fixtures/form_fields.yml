@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  label: MyString
+  answer_type: MyString
+  answer_options: MyText
+  form: 
+  suggation: MyText
+
+two:
+  label: MyString
+  answer_type: MyString
+  answer_options: MyText
+  form: 
+  suggation: MyText

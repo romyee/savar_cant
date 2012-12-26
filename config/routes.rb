@@ -1,4 +1,6 @@
 SavarCantt::Application.routes.draw do
+  resources :form_fields
+
   resources :forms
 
   resources :users
