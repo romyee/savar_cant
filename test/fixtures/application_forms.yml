@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user: 
+  form: 
+  request_date: 2012-12-26 14:10:58
+  type_of_move: MyString
+  purpose: MyText
+  duration: MyText
+  tracking_id: MyString
+  status: 1
+
+two:
+  user: 
+  form: 
+  request_date: 2012-12-26 14:10:58
+  type_of_move: MyString
+  purpose: MyText
+  duration: MyText
+  tracking_id: MyString
+  status: 1

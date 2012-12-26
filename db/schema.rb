@@ -11,7 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121226073008) do
+ActiveRecord::Schema.define(:version => 20121226081058) do
+
+  create_table "application_forms", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "form_id"
+    t.datetime "request_date"
+    t.string   "type_of_move"
+    t.text     "purpose"
+    t.text     "duration"
+    t.string   "tracking_id"
+    t.integer  "status",       :default => 1
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
+  end
+
+  add_index "application_forms", ["form_id"], :name => "index_application_forms_on_form_id"
+  add_index "application_forms", ["user_id"], :name => "index_application_forms_on_user_id"
 
   create_table "form_fields", :force => true do |t|
     t.string   "label"
